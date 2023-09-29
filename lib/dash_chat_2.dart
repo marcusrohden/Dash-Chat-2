@@ -6,7 +6,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_parsed_text/flutter_parsed_text.dart';
 import 'package:intl/intl.dart' as intl;
-import 'package:url_launcher/url_launcher.dart';
 
 import 'src/widgets/image_provider/image_provider.dart';
 
@@ -33,7 +32,7 @@ part 'src/widgets/message_list/message_list.dart';
 part 'src/widgets/message_row/default_avatar.dart';
 part 'src/widgets/message_row/default_message_decoration.dart';
 part 'src/widgets/message_row/default_message_text.dart';
-part 'src/widgets/message_row/default_parse_patterns.dart';
+
 part 'src/widgets/message_row/default_user_name.dart';
 part 'src/widgets/message_row/media_container.dart';
 part 'src/widgets/message_row/message_row.dart';

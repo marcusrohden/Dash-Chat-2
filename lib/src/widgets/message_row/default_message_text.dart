@@ -84,17 +84,28 @@ class DefaultMessageText extends StatelessWidget {
   }
 
   Widget getParsePattern(BuildContext context, String text) {
-    return ParsedText(
-      parse: messageOptions.parsePatterns != null
-          ? messageOptions.parsePatterns!
-          : defaultPersePatterns,
-      text: text,
-      style: TextStyle(
-        color: isOwnMessage
-            ? messageOptions.currentUserTextColor(context)
-            : messageOptions.textColor,
-      ),
-    );
+    final List<MatchText>? parsePatterns = messageOptions.parsePatterns;
+
+    if (parsePatterns != null) {
+      return ParsedText(
+        parse: parsePatterns,
+        text: text,
+        style: TextStyle(
+          color: isOwnMessage
+              ? messageOptions.currentUserTextColor(context)
+              : messageOptions.textColor,
+        ),
+      );
+    } else {
+      return Text(
+        text,
+        style: TextStyle(
+          color: isOwnMessage
+              ? messageOptions.currentUserTextColor(context)
+              : messageOptions.textColor,
+        ),
+      );
+    }
   }
 
   Widget getMention(BuildContext context, Mention mention) {
