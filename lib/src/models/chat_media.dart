@@ -69,8 +69,6 @@ class MediaType {
     switch (value) {
       case 'image':
         return MediaType.image;
-      case 'video':
-        return MediaType.video;
       case 'file':
         return MediaType.file;
       default:

@@ -32,14 +32,6 @@ class MediaContainer extends StatelessWidget {
       child: const CircularProgressIndicator(),
     );
     switch (media.type) {
-      case MediaType.video:
-        return Stack(
-          alignment: AlignmentDirectional.bottomEnd,
-          children: <Widget>[
-            VideoPlayer(url: media.url, key: GlobalKey()),
-            if (media.isUploading) loading
-          ],
-        );
       case MediaType.image:
         return Stack(
           alignment: AlignmentDirectional.bottomEnd,
